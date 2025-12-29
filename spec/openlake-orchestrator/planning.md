@@ -1,8 +1,18 @@
-# OpenLake Orchestrator – Planning
+# OpenLake Orchestrator – Planning (UPDATED: UI/UX production shell)
 
 ## Purpose
 Deliver a self-hosted, OSS-first workflow automation and lakehouse platform that replicates Databricks Workflows/Jobs/SQL Warehouse semantics using:
 Airflow + Spark + Iceberg + Trino + MinIO + MLflow + OpenLineage + Prometheus/Grafana.
+
+## UI/UX Reference
+The console UI is Databricks-style:
+- left navigation shell
+- global search + workspace selector
+- Home onboarding cards
+- Catalog browser
+- Jobs & runs views
+- SQL editor + warehouses
+This is specified in: spec/openlake-orchestrator/ui.md
 
 ## System Components (Target)
 | Area | Default | Replaceable With |
@@ -56,10 +66,13 @@ spec/openlake-orchestrator/
 * runs API (trigger, status, logs pointers)
 * persistence (Postgres)
 
-### Phase 3 — UI Console
-* workspace selector
-* jobs list + run history
-* run detail view + task logs view
+### Phase 3 — UI Console (Databricks-style)
+* app shell (left nav + top bar)
+* home onboarding + recents
+* catalog browser
+* jobs list + run history + log viewer
+* SQL editor + warehouses
+* compute profiles
 
 ### Phase 4 — Workflow Engine Integration
 * sync job specs to Airflow DAGs

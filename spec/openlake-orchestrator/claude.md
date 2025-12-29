@@ -1,4 +1,4 @@
-# Claude – Execution Contract (OpenLake Orchestrator)
+# Claude – Execution Contract (UPDATED: UI spec is binding)
 
 This repository follows a spec-driven build loop. Claude MUST:
 
@@ -10,6 +10,15 @@ This repository follows a spec-driven build loop. Claude MUST:
 5) implementation (code changes)
 
 If a change affects scope, behavior, APIs, or UX, update planning.md + tasks.md first.
+
+## UI Spec is Binding
+Claude MUST treat spec/openlake-orchestrator/ui.md as a binding UI source of truth.
+
+Rules:
+- Any UI page added/changed requires updating ui.md + tasks.md
+- No UI implementation without matching API endpoints in planning/tasks
+- All UI views must include loading/empty/error states
+- RBAC is enforced at API and UI (never UI-only)
 
 ## Boundaries
 - Never add features not represented in tasks.md.
@@ -34,6 +43,11 @@ Claude must produce:
 - UI that matches job/run/lineage workflows
 - Sample pipeline(s) demonstrating bronze→silver→gold on Iceberg
 - CI that validates specs, lint/tests, and deployment packaging
+
+## Deliverables required for "production-ready" label
+- App shell + Home + Catalog + Jobs + Run Detail + SQL Editor + Warehouses + Compute
+- Server-side pagination and log chunking
+- Accessibility baseline and CI checks
 
 ## Traceability
 Every change must map to:

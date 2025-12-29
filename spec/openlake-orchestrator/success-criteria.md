@@ -1,4 +1,17 @@
-# Success Criteria – OpenLake Orchestrator
+# Success Criteria (UPDATED: UI production readiness)
+
+## UI Production Readiness
+- No blank pages; all views have loading/empty/error states
+- RBAC gating works end-to-end (UI + API)
+- Logs viewer handles large logs (chunked + virtualized)
+- Server-side pagination for jobs/runs/tables/queries
+- Baseline accessibility: keyboard nav + aria labels on major components
+
+## Platform Parity (80/20 Databricks)
+- Jobs: DAG dependencies + schedules + run history + logs
+- Catalog: browse Iceberg tables + schema + sample query preview
+- SQL: editor + warehouses list + query history
+- Compute: profiles visible + referenced by jobs
 
 ## Functional Parity Targets (80/20 Databricks)
 - Jobs:
